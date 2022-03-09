@@ -21,6 +21,18 @@ npm-config work
 npm whoami
 ```
 
+## Shell tab completion
+
+If you want tab completion, add something like this to your shell profile:
+
+```shell
+function _npm-config_completions {
+  local cur_word="${COMP_WORDS[COMP_CWORD]}"
+  COMPREPLY=($(compgen -W 'work personal' -- "$cur_word"))
+}
+complete -F _npm-config_completions npm-config
+```
+
 ## Notes
 
 Alternative approach: use a bash profile function to set `NPM_CONFIG_USERCONFIG` env var
