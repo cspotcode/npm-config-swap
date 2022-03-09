@@ -1,4 +1,6 @@
 {
+    "name": "npm-config-swap",
+    "version": "0.0.0",
     "bin": {
         "npm-config": "./npm-config.sh"
     }
